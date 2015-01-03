@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>小说-当当图书</title>
+<style type="text/css">
+    *{
+	    margin:0px;
+	    padding:0px;
+	    list-style-type:none;
+	    border:0px;
+	    font-size:100%;
+	}
+	div{
+	    display:block;
+	    list-style-type:none;
+	}
+	a{
+	    color:#646464;
+	    text-decoration:none;
+	}
+	.header{
+	    min-width:1200px;
+	    background-color:#ffffff;
+	    font-family:Arial;
+	    font-size:12px;
+	    color:#646464;
+	}
+    .div1{
+	    width:100%;
+	    background-color: #c1e6e5;
+	}
+	.div1 div{
+        width:1200px;
+	    height:150px;
+	    margin:0px auto;
+	    overflow:hidden;
+	}
+	.div2{
+	    width:100%;
+	    background-color:#f9f9f9;
+	    border-bottom:1px solid #f2f2f2;
+	    height:34px;
+	    line-height:34px;
+	    position:relative;
+	}
+	.div2-1{
+	    width:1200px;
+	    margin:0px auto;
+	    background-color:#f9f9f9;
+	    height:34px;
+	}
+	.div2-1-1{
+	    float:right;
+	    height: 26px;
+	    padding-top: 5px;
+	    line-height:26px;
+	}
+	.div2-1-1 img{
+		display: block;
+		float: left;
+		width: 26px;
+		height: 26px;
+	}
+	.div2-1-1 a{
+		display: block;
+		float: left;
+		padding-left: 3px;
+		height: 26px;
+		line-height: 26px;
+	    color:#ff2832;
+	    width:85px;
+	}
+	.ul1{
+	    display:block;
+	    float:right;
+	    padding-top:2px;
+	}
+	.ul1 li{
+		border-right: 1px solid #e6e6e6;
+	    float:left;
+	    height:22px;
+	    padding:4px 6px 0px;
+	    line-height:21px;
+	    position:relative;
+	}
+	.ul1 li img{
+	    float:left;
+	}
+    .ul1 li a{
+	    float:left;
+    	color: #646464;
+    	text-decoration: none;
+    	display: block;
+    	position: relative;
+    	line-height: 21px;
+    }
+    .ul1 li a:hover, .info a:hover, .div7-3-1 a:hover{
+    	color: #ff2832;
+    }
+    .ul1 li ul{
+        display:none;
+    }
+    .ul1 li:hover ul{
+        display: block;
+        width:81px;
+        position: absolute;
+        top: 22px;
+        left: -1px;
+        border: 1px solid #e6e6e6;
+        border-top: none;
+        background-color: #fff;
+        padding: 4px 0;
+        z-index: 50;
+    }
+    .ul1 li:hover ul li{
+        width:81px;
+        background: none;
+        float: none;
+        height: 22px;
+        line-height: 22px;
+        padding: 0;
+    }
+    .ul1 li:hover ul li:hover{
+    	background-color: #f5f5f5;
+    }
+    .ul1 li:hover ul li a{
+        text-decoration: none;
+        color:#646464;
+        padding: 0 0 0 8px;
+        line-height: 22px;
+        height: 22px;
+        display: block;
+        font-size: 12px;
+    }
+    .div2-1-2{
+    	padding: 5px 0 0 10px ;
+    	height: 24px;
+    	line-height: 24px;
+    	position: relative;
+    	float: left;
+    }
+    .div span{
+    	height: 24px;
+    }
+    .a2{
+    	display: inline-block;
+    	text-decoration: none;
+    	color: #ff2832;
+		width:30px;
+    	margin-right: 4px;
+    	line-height: 24px;
+    }
+    .a3{
+    	display: inline-block;;
+    	text-decoration: none;
+    	color: #646464;
+    	margin-right: 4px;
+    	line-height: 24px;
+    }
+	.div3{
+	    position:relative;
+	    
+	}
+	.div3-1{
+	    position:relative;
+	    height:110px;
+	    width:1200px;
+	    margin:0 auto;
+	}
+	.div3-1-1{
+	    overflow:hidden;
+	    width:362px;
+	    vertical-align:middle;
+	    left:0;
+	    top:0;
+	}
+	.div3-1-2{
+	    position:absolute;
+	    margin-top:32px;
+	    height:48px;
+	    left:362px;
+	    top:0;
+	}
+	.div3-1-2 form{
+	    display:block;
+	    height:50px;
+	}
+	#key{
+	    width:389px;
+	    height:18px;
+	    border:1px solid #c8c8c8;
+	    padding:10px 0 10px 10px;
+	    position:absolute;
+	    left:0;
+	    top:0;
+	    color:#323232;
+	    font:12px/18px Arial,'Hiragino Sans GB',"simsun";
+	    outline:0;
+	}
+	.select{
+	    position:absolute;
+	    top:0px;
+	    left:401px;
+	    border:1px solid #c8c8c8;
+	    border-left:none;
+	    width:92px;
+	    height:38px;
+	    line-height:38px;
+	    font:16px/36px "Microsoft Yahei";
+	    color:#969696;
+	    padding:0 0 0 14px;
+	    background-color:#fafafa;
+	}
+	.select span{
+	    line-height:38px;
+	    font:16px/36px "Microsoft Yahei";
+	    color:#969696;
+	    cursor:pointer;
+	}
+	.icon{
+	    width: 13px;
+        height: 7px;
+        overflow: hidden;
+        position: absolute;
+        left: 88px;
+        top: 16px;
+	    background:url(images2/xiala.jpg) no-repeat;
+	}
+	.select_pop{
+	    width: 104px;
+        border: 1px solid #c8c8c8;
+        position: absolute;
+        top: 38px;
+        left: -1px;
+        background-color: #fff;
+        overflow: auto;
+	}
+	.select_pop a{
+	    display:block;
+	    height:24px;
+	    padding:0 5px 0 15px;
+	    font:12px/24px 'Hiragino Sans GB',"simsun";
+	}
+    .button{
+	    background:url(images2/sousuo.jpg);
+	    width:80px;
+	    height:40px;
+	    border:none;
+	    margin-left:2px;
+	    position:absolute;
+	    left:508px;
+	    top:0;
+	}
+	.div3-1-3{
+	    position: absolute;
+        top: 77px;
+        left: 362px;
+        color: #969696;
+        width: 589px;
+        line-height: 20px;
+	}
+	.select_hot{
+	    float:left;
+	    width:518px;
+	    overflow:hidden;
+	    height:20px;
+	    line-height:20px;
+	    color:#969696;
+	}
+	.div3-1-3 a{
+	    color:#969696;
+	    margin-right:15px;
+	    height:20px;
+	    overflow:hidden;
+	}
+	.div3-1-4{
+	    position:absolute;
+	    left:1090px;
+	    top:13px;
+	}
+	.div4{
+	    width:100%;
+	    height:36px;
+	    background-color:#ff2832;
+	}
+	.div4-1{
+	    width:1200px;
+	    margin:0 auto;
+	}
+	.div4-1 li{
+	    float:left;
+	    text-align:center;
+	    position:relative;
+	}
+	.div4-1 li:hover{
+		background-color:#f01e28;
+	}
+	.all{
+	    width: 191px;
+        margin-right: 17px;
+        margin-left: -3px;
+        display: inline;
+        text-align: left;
+	    background: #fa2832 url(http://img38.ddimg.cn/upload_img/00363/header/home_y_sprite.png) repeat-y -190px 0;
+	}
+	.div4-1 li a{
+	    color:#ffffff;
+	    font:14px/36px "Microsoft Yahei";
+	    text-decoration:none;
+	    padding:0 15px;
+	    display:block;
+	    font-weight:bold;
+	}
+	.div5{
+	    background:#f5f5f5;
+	    float:none;
+	    width:auto;
+	}
+	.div5 ul{
+	    height:31px;
+	    margin:0 auto;
+	    overflow:hidden;
+	    line-height:30px;
+	    width:1200px;
+	}
+	.div5 ul li{
+	    float:left;
+	    padding:0 15px;
+	    margin-left:-1px;
+	    white-space:nowrap;
+	    background: url(http://img4.ddimg.cn/header/header2014/sub_line_bg.png) right center no-repeat;
+	}
+	.div5 ul li a:hover{
+		color: #ff2832;
+	}
+	._body{
+	    width:1200px;
+	    margin:10px auto;
+	}
+	.div6{
+        margin-bottom: 20px;
+	    clear:both;
+	    position:relative;
+	}
+	.div6:after{
+		content: ".";
+		clear: both;
+		display: block;
+        font-size: 0px;
+        height: 0px;
+        visibility: hidden;
+	}
+	.div6-1{
+	    margin-right:10px;
+	    float:left;
+	    position:relative;
+	    width:190px;
+	}
+	.div6-1-1{
+	    width:190px;
+	    margin-bottom:10px;
+	}
+	.flq_head{
+	    height:35px;
+	    padding-left:27px;
+	    font-size:18px;
+	    line-height:34px;
+	    width:163px;
+	    position:relative;
+	    overflow:hidden;
+	}
+	.flq_head img{
+	    display:block;
+	    position:absolute;
+	    left:5px;
+	    top:5px;
+	}
+	.tou{
+		float: left;
+	    background:none;
+	    padding:0 9px;
+	}
+	.fen{
+		float: left;
+		padding:0 0 0 0;
+	}
+	.flq_head ul li a{
+	    color:#666;
+	    font-family:"Microsoft Yahei";
+	    font-weight:bold;
+	}
+	.flq_body{
+	    width:184px;
+	    border:3px solid #bba79e;
+	    position:relative;
+	    max-height:802px;
+	}
+	.con{
+	    clear:both;
+	}
+	.flq_body div{
+	    width:170px;
+	    position:relative;
+	    overflow:hidden;
+	    font-family: "Microsoft Yahei";
+        background: #f4f3ef;
+	    height:34px; 
+        line-height: 34px;
+        padding-left: 13px;
+	}
+	.flq_body div a{
+	    color: #863e18;
+        font-weight: bold;
+        display: block;
+        width: 100px;
+	    font-size:14px;
+	}
+	.flq_body div a:hover{
+		color: #ec7814;
+	}
+	.div6-2{
+	    width:750px;
+	    position:absolute;
+	    left:190px;
+	    top:0;
+	}
+	#myFocus{
+	    width:750px;
+	    height:315px;
+	    position:absolute;
+	    left:10px;
+	    top:35px;
+	}
+	
+    #myFocus .pic li{
+        position:absolute;
+        top:0;
+        left:0;
+    }
+    #myFocus .num{
+        position: absolute;
+        bottom: 10px;
+        right: 0px;
+        z-index: 2;
+        float: right;
+    }
+    #myFocus .num li{
+        width: 21px;
+        height: 21px;
+        line-height: 21px;
+        border-radius: 50%;
+        background: #fff;
+        margin-right: 10px;
+        text-align: center;
+        color: #000;
+        font-family: "Microsoft Yahei";
+        font-size: 14px;
+        float: left;
+        position: relative;
+        cursor: pointer;
+    }
+    #myFocus .num li.current{
+        background:#ff4848;
+        color: #fff;
+    }
+    .img{
+        width: 750px;
+        height: 315px;
+    }
+    #myFocus:hover .arrows{
+      display: block;
+    }
+    .arrows{
+    display: none;
+    }
+    a.scrArrAbsLeft{
+      position: absolute;
+      left: 0px;
+       top: 45%;
+       width: 31px;
+       height: 41px;
+       background: url(images2/zuojiantou.jpg);
+       z-index: 10;
+     }
+     a.scrArrAbsLeft:hover{
+       background: url(images2/zhongzuojiantou.jpg);
+     }
+     a.scrArrAbsRight{
+       position: absolute;
+       right: 0px;
+       top: 45%;
+       width: 31px;
+       height: 41px;
+       background: url(images2/youjiantou.jpg);
+       z-index: 10;
+     }
+    a.scrArrAbsRight:hover{
+      background: url(images2/zhongyoujiantou.jpg);
+    }
+	.choose{
+	    position:absolute;
+	    width:750px;
+	    left:10px;
+        top:360px;
+	}
+	.choose_head{
+		width: 750px;
+	    height:50px;
+	}
+	.choose_head img{
+	    float:left;
+	}
+	.choose_head div{
+	    width:700px;
+	    height:34px;
+	    position:absolute;
+	    left:50px;
+	    top:0;
+	    font-size:16px;
+	    color:#863e18;
+	    font-weight:bold;
+	    border-bottom: 1px solid #863e18;
+	    font-family: "Microsoft Yahei";
+        padding-top: 9px;
+        line-height: 34px;
+	}
+	.tab_aa{
+	    width:550px;
+	    height:30px;
+	    position:absolute;
+	    left:180px;
+	    top:11px;
+	}
+	.tab_aa li{
+	    float:left;
+	    padding:0 15px;
+        height: 30px;
+        line-height: 30px;
+	    color: #863e18;
+        font-size: 14px;
+        font-family: 'Microsoft Yahei';
+	}
+	.choose_body{
+	    width:750px;
+	    position:absolute;
+	}
+	.choose_body div{
+	    float:left;
+	    padding:25px 37px;
+	}
+	.product_ul{
+		width: 800px;
+        padding-top: 25px;
+	}
+	.product_ul li{
+		width: 150px;
+        margin-right: 47px;
+        margin-bottom: 10px;
+        height: 250px;
+        position: relative;
+        overflow: visible;
+        float: left;
+	}
+	.product_ul li img{
+		width: 150px;
+		height: 150px;
+		display: block;
+	}
+	.name{
+		padding: 7px 20px 0;
+        height: 36px;
+        line-height: 17px;
+        overflow: hidden;
+	}
+	.name a{
+		color: #000;
+        font-size: 12px;
+	}
+	.name a:hover{
+		text-decoration: underline;
+		color: #ec7814;
+	}
+	.name2{
+		padding: 3px 20px;
+        height: 24px;
+        line-height: 24px;
+        overflow: hidden;
+        color: #aaa;
+	}
+	.author{
+		font-size: 12px;
+        color: #aaa;
+	}
+	.name3{
+		padding-left: 20px;
+        height: 16px;
+        line-height: 16px;
+        overflow: hidden;
+        font-family: "Arial";
+        font-size: 14px;
+	}
+	.div6-3{
+	    width:240px;
+	    position:absolute;
+	    left:960px;
+	    top:35px;
+	}
+	.div6-3-1{
+	    border:1px solid #eaeaea;
+	    padding:6px 0 0;
+	    width:238px;
+	    position:relative;
+	    margin-bottom:10px;
+	    overflow:hidden;
+	}
+	.topic{
+	    display:block;
+	    height: 25px;
+        font-size: 16px;
+        color: #863e18;
+        font-weight: bold;
+        padding-left: 10px;
+        font-family: "Microsoft Yahei";
+        position: relative;
+        overflow: hidden;
+        width: 218px;
+        line-height: 24px;
+	}
+	.div6-3-1 li{
+	    line-height: 22px;
+        height: 22px;
+        position: relative;
+        overflow: hidden;
+        padding-left: 17px;
+        background: url(http://img3.ddimg.cn/00363/book2/book2_lr.png) -20px -128px no-repeat;
+        width: 210px;
+	}
+	.div6-3-1 a{
+	    color:#000;
+	    font-size:12px;}
+	.picture{
+	    float:left;
+	}
+	.price{
+	    font-size:14px;
+	    font-family: "Arial";
+	}
+	.price a:hover{
+		text-decoration:underline;
+	}
+	.sign{
+	    color:#c30000;
+	    font-weight:bold;
+	
+	}
+	.link{
+	    color:#487a6f;
+	}
+	.picture_r{
+	    color:#aaa;
+	    text-decoration:line-through;
+	}
+	.picture_w{
+	    margin:2px 9px;
+	}
+	.footer{
+		padding-top: 40px;
+	    width:100%;
+	}
+	.div7{
+	    border-top:2px solid #fa5000;
+	    margin-top:15px;
+	    background-color:#fff;
+	    clear:both;
+	}
+	.div7-1{
+	    background-color:#fafafa;
+	    border-bottom:1px solid #ebebeb;
+	    width:100%;
+	}
+	.div7-1-1{
+	    width:960px;
+	    margin:0 auto;
+	    height:68px;
+	    padding:5px 0;
+	}
+	.div7-1-1 a{
+	    display:block;
+	    float:left;
+	}
+	.div7-2{
+	    width:920px;
+	    padding-left:40px;
+	    height:140px;
+	    margin:0 auto;
+	    padding-top:30px;
+	    border-bottom: 1px solid #ebebeb;
+	}
+	.div7-2-1{
+	    width:153px;
+	    float:left;
+	}
+	.footer_head_img{
+		display: block;
+		float: left;
+	}
+	.footer_head_span{
+		display: block;
+		float: left;
+	    height: 40px;
+	    line-height: 40px;
+        font-size: 16px;
+        font-family: "microsoft yahei";
+        color: #7d7d7d;
+	}
+	.footer_body{
+		float: left;
+	}
+	.info{
+	    padding-left:44px;
+	}
+	.info li{
+	    height:20px;
+	    line-height:20px;
+	}
+	.info li a{
+	    text-decoration: none;
+        color: #7d7d7d;
+        font-size: 12px;
+	}
+	.div7-3{
+	    color: #8c8c8c;
+        font-size: 12px;
+        text-decoration: none;
+        border-top: 1px solid #ebebeb;
+        width: 100%;
+        min-width: 960px;
+        padding: 17px 0 50px;
+	}
+	.div7-3-1{
+		text-align: center;
+        line-height: 20px;
+        padding-bottom: 17px;
+	}
+	.img_a{
+		width: 22px;
+		height: 22px;
+	}
+	
+</style>
+</head>
+
+<body>
+    
+	<div class="header">
+	    <div class="div1">
+	        <div>
+	            <img src="images2/dangdangdang.jpg"/>
+		    </div>
+	    </div>
+	    <div class="div2">
+		    <div class="div2-1">
+			    <div class="div2-1-1">
+			    	<img src="images2/niujiaosuo.jpg"/>
+				    <a href="http://static.dangdang.com/topic/2227/176801.shtml">纽交所上市公司</a>
+				</div>
+				<ul class="ul1">
+				    <li class="li1">
+					    <img class="img_a" src="images2/gouwuche.jpg"/>
+					    <a href="http://shopping.dangdang.com/shoppingcart/shopping_cart.aspx#dd_refer=http%3A//www.dangdang.com/">购物车</a>
+					</li>
+					<li>
+					    <a href="https://login.dangdang.com/signin.aspx?ReturnUrl=http://orderb.dangdang.com/myallorders.aspx">我的订单</a>
+					</li>
+					<li>
+					    <img class=" img_a" src="images2/shouji.jpg"/>
+					    <a href="http://t.dangdang.com/20130220_ydmr">手机当当</a>
+					</li>
+					<li>
+					    <a href="https://login.dangdang.com/Signin.aspx?ReturnUrl=http://myhome.dangdang.com/">我的当当</a>
+						<img src="images2/xia.jpg"/>
+						<ul>
+                            <li><a target="_blank" href="http://e.dangdang.com/ebook/listUserEbooks.do">我的数字书架</a></li>
+                            <li><a target="_blank" href="http://my.dangdang.com/memberpoints/index.aspx?ref=my-0-L">我的积分</a></li>
+                            <li><a target="_blank" href="http://customer.dangdang.com/wishlist/cust_wish_list.aspx?ref=my-0-L">我的收藏</a></li>
+                            <li><a target="_blank" href="http://newaccount.dangdang.com/payhistory/mybalance.aspx">我的余额</a></li>
+                            <li><a target="_blank" href="http://comm.dangdang.com/review/reviewbuy.php?ref=my-0-L">我的评论</a></li>
+                            <li><a target="_blank" href="http://newaccount.dangdang.com/payhistory/mycoupon.aspx">礼券/礼品卡</a></li>
+                        </ul>
+					</li>
+					<li>
+					    <a href="http://misc.dangdang.com/giftcardCompany/company.aspx">企业采购</a>
+						<img src="images2/xia.jpg"/>
+						<ul >
+                            <li><a target="_blank" href="http://misc.dangdang.com/giftcardCompany/company.aspx">大宗采购</a></li>
+                            <li><a target="_blank" href="http://t.dangdang.com/giftcard/GiftCardIndex">礼品卡采购</a></li>
+                            <li><a target="_blank" href="http://account.dangdang.com/payhistory/mymoney.aspx">礼品卡激活</a></li>
+                            <li><a target="_blank" href="http://help.dangdang.com/details/page24">礼品卡使用</a></li>
+                        </ul>
+					</li>
+					<li>
+						<a href="http://help.dangdang.com/index">客服服务</a>
+						<img src="images2/xia.jpg"/>
+						<ul >
+                            <li><a target="_blank" href="http://help.dangdang.com/index">帮助中心</a></li>
+                            <li><a target="_blank" href="http://help.dangdang.com/details/page206">联系客服</a></li>
+                            <li><a target="_blank" href="http://help.dangdang.com/email_contact">我要投诉</a></li>
+                            <li><a target="_blank" href="http://help.dangdang.com/email_contact">意见建议</a></li>
+                        </ul>
+					</li>
+				</ul>
+				<div class="div2-1-2">
+					<span>欢迎光临当当，请
+						<a href="https://login.dangdang.com/signin.aspx?returnurl=http%3A//www.dangdang.com/" class="a2">登陆</a>
+						<a href="https://login.dangdang.com/Register.aspx?returnurl=http%3A//www.dangdang.com/" class="a3"> 免费注册</a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="div3">
+			<div class="div3-1">
+				 <div class="div3-1-1">
+					<img src="http://img38.ddimg.cn/upload_img/00405/luyi/1210-362x110.gif" usemap="#logo_link"/>
+			     </div>
+			     <div class="div3-1-2">
+					<form>
+						<input type="text" name="key" id="key">
+						<span class="select" onMouseOver="allCategoryShow();" onmouseleave="allCategoryHide();" onMouseOut="if(&quot;\v&quot;!=&quot;v&quot;){ allCategoryHide();}">
+							<span id="Show_Category_Name">全部分类</span>
+							<span class="icon"></span>
+                            <div id="search_all_category" class="select_pop" style="height: 0px; padding: 0px; border-width: 0px;">
+                                <a href="javascript:void(0);" onClick="selectCategory('',this);">
+									<span id="Show_Category_Name">全部分类</span>
+								</a>
+                                <a href="javascript:void(0);" onClick="selectCategory('100000',this);">                
+                                	<span>尾品汇</span>
+								</a>
+                                <a href="javascript:void(0);" onClick="selectCategory('01.00.00.00.00.00',this);">
+							        <span>图书</span>
+								</a>
+                                <a href="javascript:void(0);" onClick="selectCategory('03.00.00.00.00.00',this);">
+								    <span>音像</span>
+								</a>
+                                <a href="javascript:void(0);" onClick="selectCategory('05.00.00.00.00.00',this);">
+									<span>影视</span>
+							    </a>
+                                <a href="javascript:void(0);" onClick="selectCategory('98.00.00.00.00.00',this);">
+									<span>数字商品</span>
+								</a>
+                            </div>
+                        </span>
+					    <input type="button" class="button">
+					</form>
+				</div>
+				<div class="div3-1-3">
+			        <div class="select_hot">
+						热搜：
+						<a href="http://search.dangdang.com/?key=%B0%B2%CC%A4">安踏</a>
+						<a href="http://search.dangdang.com/?key=%CA%A5%B5%CF%B0%C2">圣迪奥</a>
+						<a href="http://search.dangdang.com/?key=%CE%FC%B6%A5%B5%C6">吸顶灯</a>
+						<a href="http://search.dangdang.com/?key=%B5%B1%B5%B1%D7%D4%D3%AA%BA%C3%C6%E6">好奇</a>
+						<a href="http://search.dangdang.com/?key=%F1%D2%CA%B1%BD%A1">褚时键</a>
+					</div>
+				    <a href="http://search.dangdang.com/advsearch">高级搜索</a>
+				</div>
+				<div class="div3-1-4">
+					<img src="images2/erweima.jpg">
+				</div>
+			</div>
+		</div>
+		<div class="div4">
+		   <div class="div4-1">
+		       <ul>
+			       <li class="all"><a href="http://category.dangdang.com/?ref=www-0-C">全部商品详细分类</a></li>
+				   <li><a href="http://new.dangdang.com/">新品闪购</a></li>
+				   <li><a href="http://v.dangdang.com/">尾品汇</a></li>
+				   <li><a href="http://book.dangdang.com/">图书</a></li>
+				   <li><a href="http://e.dangdang.com/">数字馆</a></li>
+				   <li><a href="http://fashion.dangdang.com/">服装</a></li>
+				   <li><a href="http://fashion.dangdang.com/sports">户外运动</a></li>
+				   <li><a href="http://baobao.dangdang.com/">孕童装</a></li>
+				   <li><a href="http://living.dangdang.com/">家居</a></li>
+				   <li><a href="http://ddyoupin.dangdang.com/">当当优品</a></li>
+				   <li><a href="http://3c.dangdang.com/">电器城</a></li>
+				   <li><a href="http://chaoshi.dangdang.com/">当当超市</a></li>
+			   </ul>
+		   </div>
+		</div>
+		<div class="div5">
+		    <ul>
+			    <li><a href="http://bang.dangdang.com/books">图书排行榜</a></li>
+                <li><a href="http://book.dangdang.com/children">童书</a></li>
+                <li><a href="http://book.dangdang.com/01.43.htm">教辅</a></li>
+                <li><a href="http://book.dangdang.com/01.03.htm">小说</a></li>
+                <li><a href="http://book.dangdang.com/01.22.htm">管理</a></li>
+                <li><a href="http://book.dangdang.com/01.05.htm">文学</a></li>
+                <li><a href="http://book.dangdang.com/01.21.htm">成功励志</a></li>
+                <li><a href="http://book.dangdang.com/01.01.htm">青春文学</a></li>
+                <li><a href="http://book.dangdang.com/01.36.htm">历史</a></li>
+                <li><a href="http://book.dangdang.com/01.28.htm">哲学宗教</a></li>
+                <li><a href="http://book.dangdang.com/01.15.htm">亲子家教</a></li>
+                <li><a href="http://book.dangdang.com/01.38.htm">传记</a></li>
+                <li><a href="http://book.dangdang.com/01.18.htm">保健养生</a></li>
+                <li><a href="http://book.dangdang.com/20130201_vcey">新书预售</a></li>
+                <li><a href="http://v.dangdang.com/vbook.html">图书尾品汇</a></li>
+                <li><a href="http://e.dangdang.com/?ref=book-01-A">电子书</a></li>
+            </ul>
+		</div>
+	</div>
+	<div class="_body">
+	    <div class="div6">
+		    <div class="div6-1">
+			    <div class="div6-1-1">
+				    <div class="con flq_head">
+					    <img src="images2/tushu.jpg"/>
+						<ul>
+						    <li class="tou"><a href="http://book.dangdang.com/">图书</a></li>
+						    <li class="fen">|</li>
+							<li class="tou"><a href="http://category.dangdang.com/cp01.03.00.00.00.00.html">小说</a></li>
+						</ul>
+					</div>
+					<div class="con flq_body">
+					    <div><a  href="http://category.dangdang.com/cp01.03.56.00.00.00.html#ddclick?act=clickcat&pos=0_0_0_p&cat=01.03.00.00.00.00&key=&qinfo=&pinfo=167440_1_72&minfo=&ninfo=&custid=&permid=20130302153640161394690882235862678&ref=http%3A%2F%2Fbook.dangdang.com%2F01.03.htm%3Fref%3Dbook-01-A&rcount=&type=&t=1404878462000">世界名著</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.55.00.00.00.html">作品集</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.32.00.00.00.html">中国古典小说</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.33.00.00.00.html">四大名著</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.30.00.00.00.html">中国当代小说</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.35.00.00.00.html">外国小说</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.41.00.00.00.html">科幻小说</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.38.00.00.00.html">侦探/悬疑/推理</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.44.00.00.00.html">情感</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.40.00.00.00.html">魔幻小说</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.45.00.00.00.html">社会</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.42.00.00.00.html">武侠</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.39.00.00.00.html">惊悚/恐怖</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.51.00.00.00.html">历史</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.52.00.00.00.html">影视小说</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.50.00.00.00.html">官场小说</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.48.00.00.00.html">职场小说</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.31.00.00.00.html">中国近现代小说</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.49.00.00.00.html">财经</a></div>
+						<div><a  href="http://category.dangdang.com/cp01.03.43.00.00.00.html">军事</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="div6-2">
+				<div id="myFocus">
+					<div class="arrows">
+                        <a class="scrArrAbsLeft" onmousedown="move(true)" id="jiantouzuo" href="javascript:void(0)"></a>
+                        <a class="scrArrAbsRight" onmousedown="move(false)" id="jiantouyou" href="javascript:void(0)"></a>
+                    </div>
+                    <ul class="pic">
+                        <li><a href="http://book.dangdang.com/20141121_4xgq"><img src="images2/yige.jpg" class="img"/></a></li>
+                        <li><a href="http://book.dangdang.com/20141113_wkzl"><img src="images2/santi.jpg" class="img"/></a></li>
+                        <li><a href="http://book.dangdang.com/20141211_x0du"><img src="images2/sanyue.jpg" class="img"/></a></li>
+                        <li><a href="http://book.dangdang.com/20141126_haqo"><img src="images2/zhipai.jpg" class="img" /></a></li>
+                        <li><a href="http://book.dangdang.com/20141203_kbeu"><img src="images2/binghe.jpg" class="img"/></a></li>
+                        <li><a href="http://book.dangdang.com/20141215_wgyd"><img src="images2/huangniao.jpg" class="img"/></a></li>
+                        <li><a href="http://book.dangdang.com/20141125_1prs"><img src="images2/diyi.jpg" class="img"/></a></li>
+                        <li><a href="http://book.dangdang.com/20141209_x4dy"><img src="images2/qidao.jpg" class="img"/></a></li>
+                    </ul>
+                    <ul class="num">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                    </ul>
+                </div>
+                <script>
+                var box=document.getElementById('myFocus'),
+                pics=box.getElementsByTagName('ul')[0],
+                pic=pics.getElementsByTagName('li'),
+                nums=box.getElementsByTagName('ul')[1],
+                num=nums.getElementsByTagName('li');
+                index=0;
+                function show(n){
+                    for(var i=0,len=pic.length;i<len;i++){
+                        pic[i].style.display='none',num[i].className='';
+                    }
+                    if(n==undefined) var next=index==len-1?0:index+1;
+                    else var next=n;
+                    pic[next].style.display='';
+                    num[next].className='current';
+                    index=next;
+                }
+                show(index);
+                var auto=setInterval(show,3000);
+                box.onmouseover=function(){clearInterval(auto)};
+                box.onmouseout=function(){auto=setInterval(show,2000)};
+                for(var i=0,len=num.length;i<len;i++){
+                    num[i].n=i;
+                    num[i].onclick=function(){show(this.n);}
+                }
+                function getCurIndex(){
+                  for(var i=0;i<num.length;i++)
+                    if(num[i].className=="current")
+                      return i;
+                }
+                function move(flag){
+                  index=getCurIndex();
+                  if(!flag){
+                    index++;
+                    if(index>(len-1)){index=0;}
+                    }
+                    else{
+                      index--;
+                      if (index<0) {index=len-1;}
+                    }
+                    for(var i=0;i<pic.length;i++){
+                      pic[i].style.display="none";
+                      num[i].className="";
+                    }
+                    pic[index].style.display="";
+                    num[index].className="current";
+                    
+	            }
+                jiantouzuo.onclick=function(){move(true);}
+                jiantouyou.onclick=function(){move(false);}
+                </script>
+				<div class="choose">
+					<div class="choose_head">
+						<img src="images2/zhu.jpg"/>
+					    <div>
+					        <span>编推荐</span>
+						    <ul class="tab_aa">
+							    <li>最流行</li>
+							    <li>都市/情感</li>
+								<li>职场/官场</li>
+						    	<li>科幻/悬疑</li>
+								<li>心灵/社会</li>
+								<li>精选套装</li>
+							</ul>
+						</div>
+					</div>
+					<div class="choose_body">
+						<ul class="product_ul">
+							<li>
+								<img src="images2/hei.jpg"/>
+							    <p class="name">
+								    <a href="http://product.dangdang.com/23581342.html">它（全两册）（恐怖小说之王）</a>
+						        </p>
+						        <p class="name2">
+						        	<span class="author">[美] 斯蒂芬金　著，穆卓芸　译</span>
+						        </p>
+						        <p class="name3">
+						            <span class="sign">¥56.60</span>
+						            <span class="picture_r">¥78.00</span>
+							    </p>
+							</li>
+							<li>
+								<img src="images2/daqin.jpg"/>
+							    <p class="name">
+								    <a href="http://product.dangdang.com/23256054.html">大秦帝国（全新修订版）</a>
+						        </p>
+						        <p class="name2">
+						        	<span class="author">孙皓晖 著</span>
+						        </p>
+						        <p class="name3">
+						            <span class="sign">¥548.50</span>
+						            <span class="picture_r">¥698.00</span>
+							    </p>
+							</li>
+							<li>
+							    <img src="images2/beiping.jpg"/>
+							    <p class="name">
+								    <a href="http://product.dangdang.com/23574855.html">北平无战事（全二册）（王牌剧作家）</a>
+						        </p>
+						        <p class="name2">
+						        	<span class="author">刘和平 著</span>
+						        </p>
+						        <p class="name3">
+						            <span class="sign">¥56.60</span>
+						            <span class="picture_r">¥78.00</span>
+							    </p>
+							</li>
+							<li>
+								<img src="images2/dajiang.jpg"/>
+							    <p class="name">
+								    <a href="http://product.dangdang.com/23503734.html">大奖东去（全三册）阿耐最知名长篇</a>
+						        </p>
+						        <p class="name2">
+						        	<span class="author">阿耐 著</span>
+						        </p>
+						        <p class="name3">
+						            <span class="sign">¥115.90</span>
+						            <span class="picture_r">¥168.00</span>
+							    </p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="div6-3">
+			    <div class="div6-3-1">
+				    <span class="topic">书讯快递</span>
+					<ul>
+                        <li><a href="http://search.dangdang.com/?key=%D1%D6%C1%AC%BF%C6">阎连科获卡夫卡文学奖</a></li>
+                        <li><a href="http://product.dangdang.com/23541742.html">在不安的世界安静的活</a></li>
+                        <li><a href="http://book.dangdang.com/20140812_eu01">第六届鲁迅文学奖获奖作品</a></li>
+                    </ul>
+				</div>
+				<div class="div6-3-1">
+				    <span class="topic">新书预售</span>
+					<div class="picture"><img src="images2/laopai.jpg"/></div>
+					<div class="price">
+					    <a href="http://product.dangdang.com/23594681.html">
+						<br/>老牌政敌（《纸牌屋》）原著作者</a>
+						<br/><span class="sign">¥27.50</span>
+						<br/><span class="picture_r">¥27.50</span>
+						<br/><span class="link">0条评论</span>
+					</div>
+				</div>
+				<div class="div6-3-1">
+				    <span class="topic">精彩专题</span>
+					<div>
+					    <a href="http://book.dangdang.com/20141026_pfmz"><img class="picture_w" src="images2/pawa.jpg"/></a>
+						<a href="http://book.dangdang.com/20140928_knjn"><img class="picture_w" src="images2/wuye.jpg"/></a>
+						<a href="http://book.dangdang.com/20141029_xgem"><img class="picture_w" src="images2/fenshou.jpg"/></a>
+					</div>
+			    </div>
+		    </div>
+	    </div>
+    </div>
+	<div class="footer">
+	    <div class="div7">
+		    <div class="div7-1">
+			    <div class="div7-1-1">
+				    <a href="http://help.dangdang.com/details/page13"><img src="images2/zheng.jpg"/></a>
+					<a href="http://help.dangdang.com/details/page2"><img src="images2/gou.jpg"/></a>
+					<a href="http://help.dangdang.com/details/page16"><img src="images2/yun.jpg"/></a>
+					<a href="http://help.dangdang.com/details/page29"><img src="images2/tui.jpg"/></a>
+				</div>
+			</div>
+			<div class="div7-2">
+			    <div class="div7-2-1">
+			    	<div>
+					    <img class="footer_head_img" src="images2/zhinan.jpg"/>
+			            <span class="footer_head_span">购物指南</span>
+			        </div>
+			        <div class="footer_body"> 
+			            <ul class="info">
+			                <li><a href="http://help.dangdang.com/details/page2">购物流程</a></li>
+			                <li><a href="http://help.dangdang.com/details/page6">发票制度</a></li>
+			                <li><a href="http://customer.dangdang.com/change/account_security.php">账户管理</a></li>
+			                <li><a href="http://help.dangdang.com/details/page8">会员优惠</a></li>
+			            </ul>
+			        </div>
+				</div>
+			    <div class="div7-2-1">
+				    <div>
+					    <img class="footer_head_img" src="images2/zhifu.jpg"/>
+			            <span class="footer_head_span">支付方式</span>
+			        </div>
+					<div class="footer_body">
+			            <ul class="info">
+			                <li><a href="http://help.dangdang.com/details/page21">货到付款</a></li>
+			                <li><a href="http://help.dangdang.com/details/page22">网上支付</a></li>
+			                <li><a href="http://help.dangdang.com/details/page24">礼品卡支付</a></li>
+			                <li><a href="http://help.dangdang.com/details/page23">银行转帐</a></li>
+			            </ul>
+		            </div>
+				</div>
+				<div class="div7-2-1">
+				    <div>
+					    <img class="footer_head_img" src="images2/dingdan.jpg">
+			            <span class="footer_head_span">订单服务</span>
+			        </div>
+					<div class="footer_body">
+			            <ul class="info">
+			                <li><a href="http://help.dangdang.com/details/page19">订单配送查询</a></li>
+			                <li><a href="http://help.dangdang.com/details/page4">订单状态说明</a></li>
+			                <li><a href="http://orderb.dangdang.com/myallorders.aspx">自助取消订单</a></li>
+			                <li><a href="http://orderb.dangdang.com/myallorders.aspx">自助修改订单</a></li>
+			            </ul>
+		            </div>
+				</div>
+				<div class="div7-2-1">
+				    <div>
+					    <img class="footer_head_img" src="images2/peisong.jpg"/>
+			            <span class="footer_head_span">配送方式</span>
+			        </div>
+					<div class="footer_body">
+			            <ul class="info">
+			                <li><a href="http://help.dangdang.com/details/page14">配送范围及免邮标准</a></li>
+			                <li><a href="http://help.dangdang.com/details/page15">当日递/次日达</a></li>
+			                <li><a href="http://help.dangdang.com/details/page18">订单自提</a></li>
+			                <li><a href="http://help.dangdang.com/details/page20">验货与签收</a></li>
+			            </ul>
+		            </div>
+				</div>
+				<div class="div7-2-1">
+					<div>
+						<img class="footer_head_img" src="images2/tuihuan.jpg"/>
+			            <span class="footer_head_span">退换货</span>
+		            </div>
+		            <div class="footer_body">
+			            <ul class="info">
+			                <li><a href="http://help.dangdang.com/details/page28">退换货政策</a></li>
+			                <li><a href="http://return.dangdang.com/reverseapplyselect.aspx">自助申请退换货</a></li>
+			                <li><a href="http://return.dangdang.com/reverseapplylist.aspx">退换货进度查询</a></li>
+			                <li><a href="http://help.dangdang.com/details/page31">退款方式和时间</a></li>
+			            </ul>
+		            </div>
+				</div>
+			    <div class="div7-2-1">
+				    <div>
+					    <img class="footer_head_img" src="images2/shangjia.jpg"/>
+			            <span class="footer_head_span">商家服务</span>
+			        </div>
+			        <div class="footer_body">
+			            <ul class="info">
+			                <li><a href="http://zhaoshang.dangdang.com/investment/actionList">招商报名</a></li>
+			                <li><a href="http://shop.dangdang.com/shangjia">商家中心</a></li>
+			                <li><a href="http://outlets.dangdang.com/merchants_cooperation">运营服务</a></li>
+			                <li><a href="http://outlets.dangdang.com/merchants_outlets">加入尾品汇</a></li>
+			            </ul>
+		            </div>
+			    </div>
+			</div>
+			<div class="div7-3">
+		        <div class="div7-3-1">
+		        	<a href="http://static.dangdang.com/topic/2227/176801.shtml">公司简介</a>
+		        	<span class="sep">|</span>
+		        	<a href="http://ir.dangdang.com/">Investor Relations</a>
+		        	<span class="sep">|</span>
+		        	<a href="http://static.dangdang.com/topic/contents/1119/2263.shtml">诚征英才</a>
+		        	<span class="sep">|</span>
+		        	<a href="http://union.dangdang.com/">网站联盟</a>
+		        	<span class="sep">|</span>
+		        	<a href="http://emkt.dangdang.com">广告服务</a>
+		        	<span class="sep">|</span>
+		        	<a href="http://outlets.dangdang.com/merchants_open">当当招商</a>
+		        	<span class="sep">|</span>
+		        	<a href="http://misc.dangdang.com/groupbuy/Default.aspx">机构销售</a>
+		        	<span class="sep">|</span>
+		        	<a href="http://static.dangdang.com/topic/744/200778.shtml">手机当当</a>
+		        	<span class="sep">|</span>
+		        	<a href="http://blog.dangdang.com/">官方Blog</a>
+		        </div>
+	        </div>    
+		</div>
+	</div>	   
+</body>
+</html>
